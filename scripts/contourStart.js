@@ -49,7 +49,7 @@ function checkLocation(){
   //all pages
   if (checkPage(`//div[ancestor::nav[contains(@class, 'NavMenu')] and contains(@class, 'NavMenu__menu-container')]`, "contourReportsMenu-contourMenu",20))
   {
-    createContourReportMenuItem(false, contourMenu, "Terrain | Contour", "contourMenu");
+    createContourReportMenuItem(false, contourMenu, "Contour", "contourMenu");
   }
 }
 

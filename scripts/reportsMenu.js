@@ -63,7 +63,7 @@ function createContourReportMenuItem(replaceMenu, func, menuText, menuId){
 
 function contourHomePage(){
   contourLoadPage("CONTOUR",`
-  <h1>Welcome to Terrain | Contour</h1>
+  <h1>Welcome to Contour</h1>
   Here you will bo able to find the custom Contour reports and request forms.<br>
   <br>
   Please note that these reports run inside the terrain website and do not transmit information to any third party services.<br>
@@ -73,7 +73,7 @@ function contourHomePage(){
   <br>
   Please select the page you wish to run from the left hand side bar. To go back to the rest of Terrain click "Go Back".<br>
   <br>
-  Thanks for using Terrain |Contour!
+  Thanks for using Contour!
   `);
 }
 
@@ -88,7 +88,7 @@ function contourLoadPage(breadcrumbText, content){
     breadcrumbA.classList = "v-breadcrumbs__item--disabled v-breadcrumbs__item v-breadcrumbs__item--disabled";
     breadcrumbA.text = breadcrumbText;
     breadcrumbLi.appendChild(breadcrumbA);
-    breadcrumb.replaceChildren(breadcrumbLi);
+    if (breadcrumb) breadcrumb.replaceChildren(breadcrumbLi);
 
     const mainArea =document.evaluate(`//div[ancestor::main[contains(@class, 'v-main')] and contains(@class, 'app-container')]`, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
     const contentArea = document.createElement("div");
